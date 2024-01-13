@@ -4,9 +4,9 @@ Serial Terminal created using pyQt6.<br><br>
 Program consists of a primary window for sending and displaying received data with an additional dialog for configuring the serial port used.
 Serial port configuration dialog class can easily be reused in another application.<br>
  
-![Main Program Window](README\MainWindow.png)
+![Main Program Window](README/MainWindow.png)
 
-![Configurator Dialog GUI example](README\ConfiguratorDialog.png)
+![Configurator Dialog GUI example](README/ConfiguratorDialog.png)
 
 GUIs created using Qt Designer, **compileSerialPortConfiguratorGUI.bat** and **compileSerialTerminalGUI.bat** scripts used for generating .py files from design files included in repo, .ui files also included for editing.<br>
 
