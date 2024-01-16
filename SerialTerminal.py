@@ -100,7 +100,7 @@ class Window(QMainWindow, Ui_SerialTerminalGUI):
         
     # Slot function, updates GUI RxData
     def updateRx(self, newText):
-        self.rxData.append(newText)
+        self.rxData.insertPlainText(newText)
         
     # Slot function, signals serial worker to send TX data and update GUI
     def updateTx(self):
@@ -151,7 +151,7 @@ class SerialPortWorker(QObject):
     def writeSerialPort(self, txData = ""):
         global serialPort
         if serialPort.is_open:
-            serialPort.write(txData.encode())
+            serialPort.write((txData + "\r\n").encode())
 
     # Slot function, stops read timer, attempts closing serial port and signals accordingly
     def closePort(self):
